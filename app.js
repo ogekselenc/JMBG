@@ -1,13 +1,9 @@
-import {generateJMBG}  from "./JMBG.js";
-
+import {generateJMBG, numbers }  from "./JMBG.js";
 
 const numbersSpace = document.getElementById("numbersSpace");
 const generateButton = document.getElementById("generateJMBG");
-let newNumbers = [];
+
 generateButton.addEventListener("click", () => {
-        newNumbers = generateJMBG();
+        generateJMBG();
+        numbersSpace.innerHTML = numbers.join("");
 });
-
-numbersSpace.innerHTML = newNumbers;
-//numbers.join("");
-
